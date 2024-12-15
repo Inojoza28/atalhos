@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guia de Atalhos para Programadores</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Cabeçalho -->
+    <header>
+      <h1><i class="fas fa-keyboard"></i> Guia de Atalhos</h1>
+      <p>Descubra atalhos úteis para <strong>VS Code</strong>, <strong>Git</strong>, <strong>Terminal</strong> e <strong>Sistema Operacional</strong>.</p>
+      <input id="search" type="text" placeholder="Pesquisar atalhos..." class="search-bar">
+      <button id="favorites-btn" onclick="toggleFavorites()" class="favorites-button">
+        <i class="fas fa-star"></i> Favoritos
+      </button>
+    </header>
+
+    <!-- Abas para Categorias -->
+    <section class="tabs">
+        <button class="tab active" onclick="switchTab('vscode')">VS Code</button>
+        <button class="tab" onclick="switchTab('git')">Git</button>
+        <button class="tab" onclick="switchTab('terminal')">Terminal</button>
+        <button class="tab" onclick="switchTab('system')">Sistema</button>
+      </section>
+      
+      <section id="content">
+        <div id="vscode" class="tab-content active">
+          <h2>Atalhos para VS Code</h2>
+          <div id="vscode-list" class="shortcuts-list"></div>
+        </div>
+        <div id="git" class="tab-content">
+          <h2>Atalhos para Git</h2>
+          <div id="git-list" class="shortcuts-list"></div>
+        </div>
+        <div id="terminal" class="tab-content">
+          <h2>Atalhos para Terminal</h2>
+          <div id="terminal-list" class="shortcuts-list"></div>
+        </div>
+        <div id="system" class="tab-content">
+          <h2>Atalhos para Sistema Operacional</h2>
+          <div id="system-list" class="shortcuts-list"></div>
+        </div>
+      </section>
+      
+
+    <!-- Modal para Favoritos -->
+    <div id="favorites-modal" class="modal hidden">
+      <div class="modal-content">
+        <span class="close-btn" onclick="toggleFavorites()">&times;</span>
+        <h2><i class="fas fa-star"></i> Meus Favoritos</h2>
+        <div id="favorites-list" class="favorites-list"></div>
+      </div>
+    </div>
+
+    <!-- Rodapé -->
+    <footer>
+      <p>Desenvolvido com <i class="fas fa-heart"></i> por Carlos Gabriel</p>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
